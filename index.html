@@ -1,7 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta name="robots" content="noindex">
-    <meta http-equiv="refresh" content="0;url=/en">
+    <title>Who is Max Sitov?</title>
+    <script type="text/javascript">
+        function redirectBasedOnLanguage() {
+            var userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('ru')) {
+                window.location.href = '/ru';
+            } else {
+                window.location.href = '/en';
+            }
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/en" />
+    </noscript>
 </head>
+<body onload="redirectBasedOnLanguage();">
+    <p>If you are not automatically redirected, <a href="/en">click here for English</a> or <a href="/ru">click here for Russian</a>.</p>
+</body>
 </html>
-
