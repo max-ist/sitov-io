@@ -4,11 +4,15 @@
     <title>Who is Max Sitov?</title>
     <script type="text/javascript">
         function redirectBasedOnLanguage() {
+            //console.log(0);                
             var userLang = navigator.language || navigator.userLanguage; 
+            console.log("Detected language:", userLang);
             if (userLang.startsWith('ru')) {
                 window.location.href = '/ru';
+                //console.log(1);
             } else {
                 window.location.href = '/en';
+                //console.log(2);                
             }
         }
     </script>
@@ -16,4 +20,7 @@
         <meta http-equiv="refresh" content="0;url=/en" />
     </noscript>
 </head>
+<body onload="redirectBasedOnLanguage();">
+    <p>If you are not redirected, <a href="/en">click here for English</a> or <a href="/ru">click here for Russian</a>.</p>
+</body>
 </html>
